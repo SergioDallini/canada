@@ -4,5 +4,9 @@
         <a class="me-3 py-2 text-dark text-decoration-none" href="index.php">Главная</a>
         <a class="me-3 py-2 text-dark text-decoration-none" href="about.php">Контакты</a>
     </nav>
-    <a class="btn btn-outline-primary" href="">Войти</a>
+    <?php if($_COOKIE['user'] == 'Yes'):?>
+    <a class="btn btn-outline-primary" href="auth.php">Личный кабинет</a>
+    <?php else:?>
+    <a class="btn btn-outline-primary" href="auth.php">Войти</a>
+    <?php endif;?>
 </div>
